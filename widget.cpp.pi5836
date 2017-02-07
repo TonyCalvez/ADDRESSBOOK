@@ -1,0 +1,41 @@
+#include "widget.h"
+#include "ui_widget.h"
+#include "ajouterdialog.h"
+
+Widget::Widget(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::Widget)
+{
+    ui->setupUi(this);
+    setWindowTitle("Carnet Adresses");
+    ui->tableWidget->setColumnCount(3);
+    ui->tableWidget->setHorizontalHeaderLabels({ "Nom" , "Prenom" , "Adresse"});
+}
+
+Widget::~Widget()
+{
+    delete ui;
+}
+
+void Widget::on_ajouterbutton_clicked()
+{
+    QString nom;
+    QString prenom;
+    QString adresse;
+    AjouterDialog personne(this);
+    personne.setWindowTitle("Ajouter...");
+    personne.exec();
+    nom=personne.nom();
+    prenom=personne.prenom();
+    adresse=personne.adresse();
+    if (personne.returnvaleur || nom.isEmpty() || prenom.isEmpty() ) {
+        return;
+    }
+    else {
+        ui->tableWidget->insertRow(ui->tableWidget->rowCount());
+        ui->tableWidget->setItem((ui->tableWidget->rowCount()-1), NOM, new QTableWidgetItem(nom));
+        ui->tableWidget->setItem((ui->tableWidget->rowCount()-1), PRENOM, new QTableWidgetItem(prenom));
+        ui->tableWidget->setItem((ui->tableWidget->rowCount()-1), ADRESSE, new QTableWidgetItem(adresse));
+    }
+
+}
