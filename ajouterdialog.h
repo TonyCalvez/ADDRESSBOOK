@@ -19,10 +19,12 @@ public:
     QString prenom() const;
     QString adresse() const;
     QString phone() const;
-    QString mobile() const;
+    QString poste() const;
     QString mail() const;
     QString statut() const;
     QString comment() const;
+    QString famille1() const;
+    QString famille2() const;
     bool annulcommande;
 
 

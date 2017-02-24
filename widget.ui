@@ -19,35 +19,35 @@
      <item>
       <widget class="QPushButton" name="Sauvegarder">
        <property name="text">
-        <string>Save</string>
+        <string>Enregistrer</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="importer">
        <property name="text">
-        <string>Import</string>
+        <string>Importer</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="ajouterbutton">
        <property name="text">
-        <string>Add</string>
+        <string>Ajouter</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="supprimerbutton">
        <property name="text">
-        <string>Delete</string>
+        <string>Supprimer</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>TextLabel</string>
+        <string>Enedis</string>
        </property>
       </widget>
      </item>

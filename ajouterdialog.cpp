@@ -38,9 +38,9 @@ QString AjouterDialog::phone() const
     return ui->lineEditphone->text();
 }
 
-QString AjouterDialog::mobile() const
+QString AjouterDialog::poste() const
 {
-    return ui->lineEditmobile->text();
+    return ui->lineEditposte->text();
 }
 
 QString AjouterDialog::mail() const
@@ -56,6 +56,16 @@ QString AjouterDialog::statut() const
 QString AjouterDialog::comment() const
 {
     return ui->lineEditcomment->text();
+}
+
+QString AjouterDialog::famille1() const
+{
+    return ui->lineEditFamille1->text();
+}
+
+QString AjouterDialog::famille2() const
+{
+    return ui->lineEditFamille2->text();
 }
 
 void AjouterDialog::on_validerButton_clicked()
